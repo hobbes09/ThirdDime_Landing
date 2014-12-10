@@ -1,5 +1,5 @@
 angular.module('Que', ['ngMaterial'])
-.controller("QueController", ['$scope', '$mdDialog', function ($scope, $mdDialog) {
+.controller("QueController", ['$scope', '$mdDialog', '$timeout', function ($scope, $mdDialog, $timeout) {
 	$scope.answer = function (reply) {
 		if (reply == "cypress"){
 			$mdDialog.hide();
@@ -40,25 +40,49 @@ angular.module('Que', ['ngMaterial'])
 		$mdDialog.hide(result);
 	};
 
-	var que6 = {"option1": false,
-	"option2": false,
-	"option3": false,
-	"option4": false};
-
 	$scope.movement = {};
-	$scope.answer6 = function (val) {
 
-		que6["option" + val] = true;
+	$scope.answer61 = function (val) {
+		$scope.showResult61 = true;
+		$scope.result61 = false;
+		if (val == "Futurism"){
+			$scope.result61 = true;
+		}
+	};
+
+	$scope.answer62 = function (val) {
+		$scope.showResult62 = true;
+		$scope.result62 = false;
+		if (val == "Fauvism"){
+			$scope.result62 = true;
+		}
+	};
+
+	$scope.answer63 = function (val) {
+		$scope.showResult63 = true;
+		$scope.result63 = false;
+		if (val == "Impressionism"){
+			$scope.result63 = true;
+		}
+	};
+
+	$scope.answer64 = function (val) {
+		$scope.showResult64 = true;
+		$scope.result64 = false;
+		if (val == "Cubism"){
+			$scope.result64 = true;
+		}
 	};
 
 	$scope.$watch(function () {
-		return que6.option1 && que6.option2 && que6.option3 && que6.option4;
+		var que6 = $scope.movement
+		return que6.paint1 && que6.paint2 && que6.paint3 && que6.paint4;
 	}, function (val) {
-		if (val) {
-			var mov = $scope.movement;
-			var result = (mov.paint1=="Futurism" && mov.paint1=="Fauvism" && mov.paint1=="Impressionism" && mov.paint1=="Cubism")
-			$mdDialog.hide(result);
-		}
+		$timeout(function () {
+			if (val) {
+				$mdDialog.hide();
+			}
+		}, 1500);
 	});
 
 	$scope.answer7 = function (val) {
