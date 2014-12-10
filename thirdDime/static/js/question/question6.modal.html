@@ -1,0 +1,68 @@
+<md-dialog aria-label="Mango (Fruit)" style="background-color: #AC9D70;">
+  <md-content>
+    <md-subheader class="md-sticky" style="background-color: #AC9D70;">
+        <div layout="row">
+            <i class="fa fa-paint-brush"> </i>
+                <div style="font-size: 1.17em; padding-left: 10px;">
+                    <b><u>Each art movement produced work with some unique inherent characters. See if you can tag the following correctly: </b></u>
+                </div>
+        </div>
+      </md-subheader>
+        <div layout="row" layout-align="end center" style="font-size: .77em;">Options at bottom.</div>
+  	<md-tabs md-selected="data.selectedIndex">
+      <md-tab id="tab1" aria-controls="tab1-content">
+        Item One
+      </md-tab>
+      <md-tab id="tab2" aria-controls="tab2-content">
+        Item Two
+      </md-tab>
+      <md-tab id="tab3" aria-controls="tab3-content">
+        Item Three
+      </md-tab>
+      <md-tab id="tab4" aria-controls="tab4-content">
+        Item four
+      </md-tab>
+    </md-tabs>
+    <ng-switch on="data.selectedIndex" class="tabpanel-container">
+        <div role="tabpanel" id="tab1-content" aria-labelledby="tab1" ng-switch-when="0" md-swipe-left="next()" md-swipe-right="previous()" layout="row" layout-align="center center">
+        	<img style="margin: auto; max-width: 100%;" src="/static/images/test1.jpg" pagespeed_url_hash="3617274378" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+          <md-radio-group ng-model="movement.paint1" flex="20">
+            <md-radio-button value="Impressionism" aria-label="Label 1" ng-click="answer6('1')">Impressionism</md-radio-button>
+            <md-radio-button value="Fauvism" aria-label="Label 2" ng-click="answer6('1')"> Fauvism </md-radio-button>
+            <md-radio-button value="Cubism" aria-label="Label 3" ng-click="answer6('1')">Cubism</md-radio-button>
+            <md-radio-button value="Futurism" aria-label="Label 4" ng-click="answer6('1')">Futurism</md-radio-button>
+          </md-radio-group>
+        </div>
+        <div role="tabpanel" id="tab2-content" aria-labelledby="tab2" ng-switch-when="1" md-swipe-left="next()" md-swipe-right="previous()" layout="row" layout-align="center center">
+        	<img style="margin: auto; max-width: 100%;" src="/static/images/test2.jpg" pagespeed_url_hash="3617274378" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+          <md-radio-group ng-model="movement.paint2" flex="20">
+            <md-radio-button value="Impressionism" aria-label="Label 1" ng-click="answer6('2')">Impressionism</md-radio-button>
+            <md-radio-button value="Fauvism" aria-label="Label 2" ng-click="answer6('2')"> Fauvism </md-radio-button>
+            <md-radio-button value="Cubism" aria-label="Label 3"ng-click="answer6('2')" >Cubism</md-radio-button>
+            <md-radio-button value="Futurism" aria-label="Label 4" ng-click="answer6('2')">Futurism</md-radio-button>
+          </md-radio-group>
+        </div>
+        <div role="tabpanel" id="tab3-content" aria-labelledby="tab3" ng-switch-when="2" md-swipe-left="next()" md-swipe-right="previous()" layout="row" layout-align="center center">
+          <img style="margin: auto; max-width: 100%;" src="/static/images/test3.jpg" pagespeed_url_hash="3617274378" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+          <md-radio-group ng-model="movement.paint3" flex="20">
+            <md-radio-button value="Impressionism" aria-label="Label 1" ng-click="answer6('3')">Impressionism</md-radio-button>
+            <md-radio-button value="Fauvism" aria-label="Label 2" ng-click="answer6('3')"> Fauvism </md-radio-button>
+            <md-radio-button value="Cubism" aria-label="Label 3" ng-click="answer6('3')">Cubism</md-radio-button>
+            <md-radio-button value="Futurism" aria-label="Label 4" ng-click="answer6('3')">Futurism</md-radio-button>
+          </md-radio-group>
+        </div>
+        <div role="tabpanel" id="tab4-content" aria-labelledby="tab4" ng-switch-when="3" md-swipe-left="next()" md-swipe-right="previous()" layout="row" layout-align="center center">
+          <img style="margin: auto; max-width: 100%;" src="/static/images/test4.jpg" pagespeed_url_hash="3617274378" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+          <md-radio-group ng-model="movement.paint4" flex="20">
+            <md-radio-button value="Impressionism" aria-label="Label 1" ng-click="answer6('4')">Impressionism</md-radio-button>
+            <md-radio-button value="Fauvism" aria-label="Label 2" ng-click="answer6('4')"> Fauvism </md-radio-button>
+            <md-radio-button value="Cubism" aria-label="Label 3" ng-click="answer6('4')">Cubism</md-radio-button>
+            <md-radio-button value="Futurism" aria-label="Label 4" ng-click="answer6('4')">Futurism</md-radio-button>
+          </md-radio-group>
+        </div>
+    </ng-switch>
+    <div class="after-tabs-area" layout="row" layout-sm="column" layout-margin layout-align="left center">
+        
+    </div>
+  </md-content>
+</md-dialog>

@@ -2,6 +2,10 @@
 	<md-content style="background-color: #3F51B5; color: white;">
 		<br/>
 		<br/>
+		<div layout="row" layout-align="center center">
+			<div ng-show="result"> <h1>BRAVO</h1></div>
+			<div ng-hide="result"> <h1>It is the Cypress tree</h1></div>
+		</div>
 		<div layout="row" layout-align="center center" align="right">
 			<span flex="15"><i class="fa fa-quote-left"></i></span>
 			<span flex="85"></span>
@@ -9,7 +13,7 @@
 		<div layout="row" layout-align="center center">
 			<span flex="15"></span>
 			<span flex="70">
-				<h3>{{intro}}</h3>
+				Renaissance artists used symbolic objects to communicate with an audience that was largely illiterate. During the Victorian era, the cypress with its dark branches and tall columnar shape was a symbol of the cemetery and death and was widely planted in European as well as Middle Eastern graveyards. In the ‘Starry Night’ Van Gogh invoked the above symbolism.
 			</span>
 			<span flex="15"></i></span>
 		</div>
@@ -18,9 +22,4 @@
 			<span flex="15"><i class="fa fa-quote-right"></i></span>
 		</div>
 	</md-content>
-	<div class="md-actions" layout="row" layout-align="center center" style="background-color: #3F51B5;">
-		<md-button class="md-primary" ng-click="questionDialog()" aria-label="Question">
-	      Dive
-	    </md-button>
-</div>
 </md-dialog>
