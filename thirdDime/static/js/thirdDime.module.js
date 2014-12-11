@@ -1,1 +1,1 @@
-angular.module("ThirdDime", ["Quiz"]);
+angular.module("ThirdDime", ["Quiz", "ngSocial"]);
