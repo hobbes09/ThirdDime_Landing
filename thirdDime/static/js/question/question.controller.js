@@ -1,5 +1,5 @@
-angular.module('Que', ['ngMaterial'])
-.controller("QueController", ['$scope', '$mdDialog', '$timeout', function ($scope, $mdDialog, $timeout) {
+angular.module('Que', ['ngMaterial', 'Data'])
+.controller("QueController", ['$scope', '$mdDialog', '$timeout', 'data', function ($scope, $mdDialog, $timeout, data) {
 	$scope.answer = function (reply) {
 		if (reply == "cypress"){
 			$mdDialog.hide();
@@ -22,6 +22,11 @@ angular.module('Que', ['ngMaterial'])
 			result = true;
 		}
 		$mdDialog.hide(result);
+	};
+
+	$scope.answer3 = function (vote) {
+		data.putVotes(1, vote)
+		$mdDialog.hide(true)
 	};
 
 	$scope.answer4 = function (val) {
@@ -85,8 +90,9 @@ angular.module('Que', ['ngMaterial'])
 		}, 1500);
 	});
 
-	$scope.answer7 = function (val) {
-		$mdDialog.hide(val);
+	$scope.answer7 = function (vote) {
+		data.putVotes(2, vote)
+		$mdDialog.hide(true)
 	};
 
 	$scope.answer8 = function () {

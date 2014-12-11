@@ -1,22 +1,40 @@
-<md-dialog aria-label="Mango (Fruit)">
-	<md-content style="background-color: #3F51B5; color: white;">
-		<br/>
-		<br/>
-		<div layout="row" layout-align="center center" align="right">
-			<span flex="15"><i class="fa fa-quote-left"></i></span>
-			<span flex="85"></span>
-		</div>
-		<div layout="row" layout-align="center center">
-			<span flex="15"></span>
-			<span flex="70">
-				<h3>InfoGraphic
-				</h3>
-			</span>
-			<span flex="15"></i></span>
-		</div>
-		<div layout="row" layout-align="center center">
-			<span flex="85"></span>
-			<span flex="15"><i class="fa fa-quote-right"></i></span>
-		</div>
-	</md-content>
-</md-dialog> 
+<div ng-controller="ArmidaController">
+	<md-dialog aria-label="Mango (Fruit)">
+		<md-content style="background-color: #3F51B5; color: white;">
+			<br/>
+			<br/>
+			<div layout="row" layout-align="center center" align="right">
+				<span flex="15"><i class="fa fa-quote-left"></i></span>
+				<span flex="85"></span>
+			</div>
+			<div layout="row" layout-align="center center">
+				<span flex="15"></span>
+				<span flex="70">
+					<h3>InfoGraphic
+					</h3>
+					<div layout="column">
+						<h4>By Anthony van Dyck</h4>
+						<md-progress-linear md-theme="red" md-mode="determinate" ng-value="vote31"></md-progress-linear><br/><br/>
+					</div>
+					<div layout="column">
+						<h4>By Sebastiano Conca</h4>
+					<md-progress-linear md-theme="brown" md-mode="determinate" ng-value="vote32"></md-progress-linear><br/><br/>
+					</div>
+					<div layout="column">
+						<h4>By Nicolas Poussin</h4>
+					<md-progress-linear md-theme="green" md-mode="determinate" ng-value="vote33"></md-progress-linear><br/><br/>
+					</div>
+					<div layout="column">
+						<h4>Fluidity of time</h4>
+					<md-progress-linear md-theme="yellow" md-mode="determinate" ng-value="vote34"></md-progress-linear><br/><br/>
+					</div>
+				</span>
+				<span flex="15"></i></span>
+			</div>
+			<div layout="row" layout-align="center center">
+				<span flex="85"></span>
+				<span flex="15"><i class="fa fa-quote-right"></i></span>
+			</div>
+		</md-content>
+	</md-dialog> 
+</div>
