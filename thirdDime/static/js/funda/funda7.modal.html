@@ -1,6 +1,6 @@
 <div ng-controller="ArmidaController">
 	<md-dialog aria-label="Mango (Fruit)">
-		<md-content style="background-color: #3F51B5; color: white;">
+		<md-content style="background-color: {{color}}; color: white;">
 			<br/>
 			<br/>
 			<div layout="row" layout-align="center center" align="right">
@@ -10,7 +10,7 @@
 			<div layout="row" layout-align="center center">
 				<span flex="15"></span>
 				<span flex="70">
-					<h3>InfoGraphic
+					<h3>As we can see here the same story can be told in several ways. Every artist brings something unique to the narrative, an element that resonated with him the most. And it is this element that bears the watermark of the artist’s creation. 
 					</h3>
 					<div layout="column">
 						<h4>By Anthony van Dyck</h4>
@@ -25,7 +25,7 @@
 					<md-progress-linear md-theme="green" md-mode="determinate" ng-value="vote33"></md-progress-linear><br/><br/>
 					</div>
 					<div layout="column">
-						<h4>Fluidity of time</h4>
+						<h4>By Michele Desubleo</h4>
 					<md-progress-linear md-theme="yellow" md-mode="determinate" ng-value="vote34"></md-progress-linear><br/><br/>
 					</div>
 				</span>
@@ -36,5 +36,10 @@
 				<span flex="15"><i class="fa fa-quote-right"></i></span>
 			</div>
 		</md-content>
+		  <div class="md-actions" layout="row" layout-align="center center" style="background-color: {{color}};">
+		    	<md-button class="md-primary" ng-click="close()" aria-label="Question">
+			      CLOSE
+		        </md-button>
+		  </div>
 	</md-dialog> 
 </div>

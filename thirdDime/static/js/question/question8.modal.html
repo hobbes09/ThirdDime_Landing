@@ -1,6 +1,6 @@
-<md-dialog aria-label="Mango (Fruit)" style="background-color: #AC9D70;">
-  <md-content>
-    <md-subheader class="md-sticky" style="background-color: #AC9D70;">
+<md-dialog aria-label="Mango (Fruit)" >
+  <md-content style="background-color: {{color}};">
+    <md-subheader class="md-sticky" style="background-color: {{color}};">
         <div layout="row">
             <i class="fa fa-paint-brush"> </i>
                 <div style="font-size: 1.17em; padding-left: 10px;">
@@ -8,7 +8,7 @@
                 </div>
         </div>
       </md-subheader>
-        <div layout="row" layout-align="end center" style="font-size: .77em;">Options at bottom.</div>
+        <div layout="row" layout-align="end center" style="font-size: .77em;">Click on an image to select.</div>
   	<md-tabs md-selected="data.selectedIndex">
       <md-tab id="tab1" aria-controls="tab1-content">
         Item One

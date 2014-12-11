@@ -1,6 +1,7 @@
 angular.module('Intro', ['ngMaterial'])
-.controller("IntroController", ['$scope', '$mdDialog', 'intro', function ($scope, $mdDialog, intro) {
+.controller("IntroController", ['$scope', '$mdDialog', 'intro', 'color', function ($scope, $mdDialog, intro, color) {
 	$scope.intro = intro;
+	$scope.color = color;
 
 	$scope.questionDialog = function () {
 		$mdDialog.hide();

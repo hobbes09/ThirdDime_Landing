@@ -1,6 +1,10 @@
 angular.module("Funda", ['ngMaterial', "Data"])
-.controller("FundaController", ['$scope', '$mdDialog', 'result', function ($scope, $mdDialog, result) {
+.controller("FundaController", ['$scope', '$mdDialog', 'result', "color", function ($scope, $mdDialog, result, color) {
 	$scope.result = result;
+	$scope.close = function () {
+		$mdDialog.hide()
+	};
+	$scope.color = color
 }])
 .controller("DaliController", ['$scope', "data", "$timeout", function ($scope, data, $timeout) {
 	data.getVotes(1).then(function (data) {

@@ -1,11 +1,14 @@
 angular.module('Que', ['ngMaterial', 'Data'])
-.controller("QueController", ['$scope', '$mdDialog', '$timeout', 'data', function ($scope, $mdDialog, $timeout, data) {
+.controller("QueController", ['$scope', '$mdDialog', '$timeout', 'data', "index", function ($scope, $mdDialog, $timeout, data, index) {
 	$scope.answer = function (reply) {
 		if (reply == "cypress"){
 			$mdDialog.hide();
 		}
 		$mdDialog.hide();
 	};
+
+	var color = ["#AC9D70", "#A3A36A", "#6D80A7", "#6D8686", "#91916C", "#B5B5C0", "#5959AC", "#C18730", "#8A5C2E"]
+	$scope.color = color[index]
 
 
 	$scope.answer1 = function (val) {

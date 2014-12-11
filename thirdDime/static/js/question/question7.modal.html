@@ -1,6 +1,6 @@
-<md-dialog aria-label="Mango (Fruit)" style="background-color: #AC9D70;">
-  <md-content>
-    <md-subheader class="md-sticky" style="background-color: #AC9D70;">
+<md-dialog aria-label="Mango (Fruit)" >
+  <md-content style="background-color: {{color}};">
+    <md-subheader class="md-sticky" style="background-color: {{color}};">
         <div layout="row">
             <i class="fa fa-paint-brush"> </i>
                 <div style="font-size: 1.17em; padding-left: 10px;">
@@ -20,7 +20,7 @@
         By Poussin
       </md-tab>
       <md-tab id="tab4" aria-controls="tab4-content">
-        By 
+        By Desubleo
       </md-tab>
     </md-tabs>
     <ng-switch on="data.selectedIndex" class="tabpanel-container">
