@@ -1,8 +1,8 @@
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.views import APIView
-from .serializers import DaliSerializer, ThoughtSerializer
 from .models import Dali, Thought
+from .serializers import DaliSerializer, ThoughtSerializer, AdopterSerializer
 
 
 class DaliDetail(APIView):
@@ -34,6 +34,17 @@ class ThoughtDetail(APIView):
 
     def post(self, request, format=None):
         serializer = ThoughtSerializer(data=request.DATA, context={'request': request})
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+        return Response(status=status.HTTP_400_BAD_REQUEST)
+
+
+class AdopterList(APIView):
+
+    def post(self, request, format=None):
+        serializer = AdopterSerializer(data=request.DATA)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)

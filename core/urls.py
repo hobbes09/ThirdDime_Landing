@@ -6,4 +6,6 @@ urlpatterns = patterns('',
                            name='dali-detail'),
                        url(r'thoughts$',
                            views.ThoughtDetail.as_view(), name='thought-detail'),
+                       url(r'adopters$',
+                           views.AdopterList.as_view(), name='adopter-list'),
                        )

@@ -4,7 +4,7 @@
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html ng-app="ThirdDime">
 	<head>
 		<title>ThirdDime</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -38,7 +38,7 @@
 		<script src="static/vendor/original/skel.min.js"></script>
 		<script src="static/vendor/original/init.js"></script>
 	</head>
-	<body ng-app="ThirdDime">
+	<body ng-controller="AppController">
 
 			
 		<!-- Intro -->
@@ -111,47 +111,7 @@
 			
 		<!-- Contact -->
 			<section id="contact" class="main style3 secondary">
-				<div class="content container">
-					<header>
-						<h2>Say Hello.</h2>
-						<div layout="row" layout-align="center center">
-							<ul ng-social-buttons
-							     data-url="'http://thirddime.com'"
-							     data-title="'ThirdDime'"
-							     data-description="'Behind the BrushStrokes'"
-							     data-image="'/static/images/p2.jpg'">
-							    <li class="ng-social-facebook">FaceBook</li>
-							    <li class="ng-social-google-plus">Google+</li>
-							    <li class="ng-social-twitter">Twitter</li>
-							    <li class="ng-social-pinterest">Pinterest</li>
-							</ul>
-						</div>
-						<p>Keep in touch with us to expand your horizons by understanding art from a deeper level.</p>
-					</header>
-					<div class="box container 75%">
-					
-					<!--  Social icons -->
-						<div class="social">
-							
-						</div>
-					<!-- Contact Form -->	
-						<div class="contact form">
-							<form method="post" action="#">
-								<div class="row 100%">
-									<div class="6u"><input type="text" name="name" placeholder="Name" /></div>
-									<div class="6u"><input type="email" name="email" placeholder="Email" /></div>
-								</div>
-								<div class="row">
-									<div class="12u">
-										<ul class="actions">
-											<li><input type="submit" value="Keep me posted !" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
-						</div>	
-					</div>
-				</div>
+				<div ng-include src="'static/layouts/contact.html'"></div>
 			</section>
 
 			
@@ -178,6 +138,7 @@
 		<script src="static/js/question/question.controller.js"></script>
 		<script src="static/js/funda/funda.controller.js"></script>
 		<script src="static/js/services/data.service.js"></script>
+		<script src="static/js/thirddime.controller.js"></script>
 
 	    <script src="static/vendor/angular-social/angular-social.js"></script>
 
