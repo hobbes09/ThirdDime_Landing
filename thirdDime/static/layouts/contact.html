@@ -1,35 +1,42 @@
 <div class="content container">
 					<header>
-						<h2 class="animate-show" ng-show="isVisible">Say Hello.</h2>
-						<h2 class="animate-show" ng-hide="isVisible">Hello!</h2>
-						<div layout="row" layout-align="center center">
-							<ul ng-social-buttons
-							     data-url="'http://thirddime.com'"
-							     data-title="'ThirdDime'"
-							     data-description="'Behind the BrushStrokes'"
-							     data-image="'http://thirddime.com/static/images/p2.jpg'">
-							    <li class="ng-social-facebook">FaceBook</li>
-							    <li class="ng-social-google-plus">Google+</li>
-							    <li class="ng-social-twitter">Twitter</li>
-							    <li class="ng-social-pinterest">Pinterest</li>
-							</ul>
+						<div class="animate-show" ng-show="isVisible">
+							<h2>Say Hello.</h2>
+							<p>Keep in touch with us to expand your horizons by understanding art from a deeper level.</p>
 						</div>
-						<p>Keep in touch with us to expand your horizons by understanding art from a deeper level.</p>
+						<div class="animate-show" ng-hide="isVisible">
+							<h2>Thank you for subscribing. More interesting artworks are coming your way soon.</h2>
+						</div>
 					</header>
 					<div class="box container 75%">
 					
-					<!--  Social icons -->
-						<div class="social">
-							
-						</div>
 					<!-- Contact Form -->	
-						<div class="contact form animate-show"  ng-show="isVisible">
+						<div class="canimate-show"  ng-show="isVisible">
 							<form name="contactForm">
 								<div layout="row">
 									<div flex="60"><input type="email" name="email" placeholder="Email" ng-model="user.email" /></div>
 									<div flex="40"><input type="submit" ng-disabled="contactForm.$dirty && contactForm.$invalid" value="Keep me posted !" ng-click="sendUser()" /></div>
 								</div>
 							</form>
-						</div>	
+						</div>
+						<div class="canimate-show"  ng-hide="isVisible" layout-padding="10" layout-margin="10">
+							<div layout="row" layout-align="center center">
+								<div flex="33">
+							        <md-button class="md-fab" aria-label="New document">
+								        <i class="fa fa-twitter"></i>
+								    </md-button>
+							    </div>
+								<div flex="33">
+							        <md-button class="md-fab" aria-label="New document">
+								        <i class="fa fa-google"></i>
+								    </md-button>
+							    </div>
+								<div flex="33">
+							        <md-button class="md-fab" aria-label="New document">
+								        <i class="fa fa-facebook"></i>
+								    </md-button>
+							    </div>
+							</div>
+						</div>
 					</div>
 				</div>
