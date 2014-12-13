@@ -27,7 +27,6 @@ angular.module('Data', [])
 
 	service.putUser = function (user) {
 		return $http.post("/core/adopters", user).then(function (data) {
-			console.log("Got user data:", data);
 			return data.data
 		});
 	};

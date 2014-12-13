@@ -14,5 +14,4 @@ class Thought(models.Model):
 
 
 class Adopter(models.Model):
-    name = models.CharField(max_length=50)
     email = models.EmailField()
