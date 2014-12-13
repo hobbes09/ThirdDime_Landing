@@ -391,14 +391,14 @@
 		input[type="submit"],
 		input[type="reset"],
 		.button {
-			background-color: #009933;
+			background-color: #98c593;
 			border: 0;
-			border-radius: 2.8em;
+			border-radius: 3.5em;
 			color: #fff;
 			cursor: pointer;
 			display: inline-block;
-			height: 2.8em;
-			line-height: 2.8em;
+			height: 3.5em;
+			line-height: 3.5em;
 			outline: 0;
 			padding: 0 2em 0 2em;
 			position: relative;
