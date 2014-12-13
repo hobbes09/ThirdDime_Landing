@@ -91,27 +91,9 @@
 						arcu, id varius justo euismod in. Curabitur egestas consectetur magna vitae.</p>
 					</header>
 
-					<div ng-controller="QuizController">
-						<div layout="row" layout-align="center center">
-							<div ng-repeat="quiz in quizes">
-								<div class="card" ng-click="askQuestion($index)">
-									<div class="flipper" ng-class="{hover: !quiz.flipped}">
-										<div class="front">
-											<img src="">
-										</div>
-										<div class="back">
-											<img src="">
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
+					<div ng-include src="'static/layouts/quiz.html'"></div>
 					<br/>
 					<br/>
-					<br/>
-
 					<div layout="row" layout-align="center center">
 						<ul ng-social-buttons
 						     data-url="'http://thirddime.com'"
