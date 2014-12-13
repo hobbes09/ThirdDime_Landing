@@ -106,4 +106,8 @@ angular.module('Que', ['ngMaterial', 'Data'])
 		var result = val == "Three" ? true : false;
 		$mdDialog.hide(result);
 	};
+
+	$scope.answer10 = function () {
+		$mdDialog.hide(true);
+	};
 }]);

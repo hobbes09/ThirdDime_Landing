@@ -10,6 +10,7 @@ angular.module("Quiz", ["ngMaterial", "Intro", "Que", "Funda"])
 		{"color": "#2F4166", "intro": "The story of Armida, a Saracen sorceress and Rinaldo, a soldier in the First Crusade, was created by the Italian poet Torquato Tasso. Over time a large number of painters have brought this story to canvas. Rinaldo is a fierce, determined warrior. Armida has been sent to stop the Christians from completing their mission and is about to murder the sleeping soldier, but instead falls in love with him at first sight. She is now conflicted and confused by her changing emotions. ", "flipped": false},
 		{"color": "#478D5E", "intro": "It starts with a simple desire to replicate all that is explicit", "flipped": false},
 		{"color": "#A34747", "intro": "War does not determine who is right, only who is left", "flipped": false},
+		{"color": "#A34747", "intro": "Lets looook at a painting", "flipped": false},
 	];
 
 	$scope.askQuestion = function (index) {
