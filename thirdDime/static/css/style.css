@@ -391,7 +391,7 @@
 		input[type="submit"],
 		input[type="reset"],
 		.button {
-			background-color: #009933;
+			background-color: #1975D1;
 			border: 0;
 			border-radius: 2.8em;
 			color: #fff;
@@ -447,14 +447,14 @@
 			input[type="submit"]:hover,
 			input[type="reset"]:hover,
 			.button:hover {
-				background-color: #a8d5a3;
+				background-color: #1975D1;
 			}
 			
 			input[type="button"]:active,
 			input[type="submit"]:active,
 			input[type="reset"]:active,
 			.button:active {
-				background-color: #88b583;
+				background-color: #1975D1;
 			}
 
 			input[type="button"].style2,
@@ -659,7 +659,7 @@
 /*********************************************************************************/
 
 	#intro {
-		background: url('images/overlay.png'), url('../images/intronew.jpg');
+		background: #595959;
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, bottom center;
@@ -942,8 +942,8 @@
 			position: absolute;
 			right: 2em;
 			top: 0;
-			height: 5em;
-			line-height: 5em;
+			height: 3em;
+			line-height: 3em;
 			margin: 0;
 		}
 		
