@@ -1,0 +1,41 @@
+<div class="content container">
+					<header>
+						<div class="animate-show" ng-show="isVisible">
+							<p>Keep in touch with us to expand your horizons by understanding art from a deeper level.</p>
+						</div>
+						<div class="animate-show" ng-hide="isVisible">
+							<h2>Thank you for subscribing. More interesting artworks are coming your way soon.</h2>
+						</div>
+					</header>
+					<div class="box container 75%">
+					
+					<!-- Contact Form -->	
+						<div class="canimate-show"  ng-show="isVisible">
+							<form name="contactForm">
+								<div layout="row">
+									<div flex="60"><input type="email" name="email" placeholder="Email" ng-model="user.email" /></div>
+									<div flex="40"><input type="submit" ng-disabled="contactForm.$dirty && contactForm.$invalid" value="Keep me posted !" ng-click="sendUser()" /></div>
+								</div>
+							</form>
+						</div>
+						<div class="canimate-show"  ng-hide="isVisible" layout-padding="10" layout-margin="10">
+							<div layout="row" layout-align="center center">
+								<div flex="33">
+							        <md-button class="md-fab" aria-label="New document">
+								        <i class="fa fa-twitter"></i>
+								    </md-button>
+							    </div>
+								<div flex="33">
+							        <md-button class="md-fab" aria-label="New document">
+								        <i class="fa fa-google"></i>
+								    </md-button>
+							    </div>
+								<div flex="33">
+							        <md-button class="md-fab" aria-label="New document">
+								        <i class="fa fa-facebook"></i>
+								    </md-button>
+							    </div>
+							</div>
+						</div>
+					</div>
+				</div>
