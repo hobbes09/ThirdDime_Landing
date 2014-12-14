@@ -53,9 +53,9 @@
 					<!-- <p> <strong>Subscribe to our mailing list</strong> </p> -->
 					<!-- <br> <br> <br>  <br> <br> <br> <br> <br> -->
 					<div layout="row" layout-sm="column" layout-align="space-between center">
-						<div layout="row" layout-align="center center" class="animate-show"  ng-show="isVisible" flex="33">
-							<input type="email" placeholder="  E-mail" ng-model="user.email"/>
-							<md-button ng-click="sendUser()" style="background: #666666;">Subscribe</md-button>
+						<div layout="row" layout-align="center center" class="animate-show"  ng-show="isVisible" flex="33" hide-sm>
+							<input type="email" placeholder="  E-mail" ng-model="user.email" style="border-radius: 10px; height: 50px;" />
+							<md-button ng-click="sendUser()" style="background: #666666; border-radius: 10px; height: 50px;">Subscribe</md-button>
 						</div>
 						<div layout="row" layout-align="center center" class="animate-show"  ng-hide="isVisible">
 							<h4>ThankYou. Please keep Exploring.</h4>
@@ -64,7 +64,7 @@
 							<a href="#one" class="button style2 down">More</a>
 						</div>
 						<a href="#quiz" flex="33">
-							<md-button layout-fill style="background: #666666;">Take quiz</md-button>
+							<md-button layout-fill style="background: #666666; border-radius: 10px;">Take quiz</md-button>
 						</a>
 					</div>
 				</div>
@@ -79,8 +79,8 @@
 					<p><strong>ThirdDime</strong> enables you to explore the unknown dimensions hidden inside an art 
 					and to create a understanding which is beyond the colours imprints on a canvas.</p>
 					<div layout="row" layout-align="center center" class="animate-show"  ng-show="isVisible">
-						<input type="email" placeholder="  E-mail" ng-model="user.email"/>
-						<md-button ng-click="sendUser()" style="background: #666666;">Subscribe</md-button>
+						<input type="email" placeholder="  E-mail" ng-model="user.email" style="border-radius: 10px; height: 50px;" />
+						<md-button ng-click="sendUser()" style="background: #666666;  border-radius: 10px; height: 50px;">Subscribe</md-button>
 					</div>
 					<div layout="row" layout-align="center center" class="animate-show"  ng-hide="isVisible">
 						<h4>ThankYou. Please keep Exploring.</h4>
@@ -145,7 +145,7 @@
 							<form name="contactForm">
 								<div layout="row" layout-sm="column" layout-align="space-between center">
 									<div flex="50"><div layout="row"><input type="email" name="email" placeholder="Email" ng-model="user.email" layout-fill /></div></div>
-									<div flex="50"><input type="submit" class="active" ng-disabled="contactForm.$dirty && contactForm.$invalid" value="Keep me posted !" ng-click="sendUser()" /></div>
+									<div flex="50"><input type="submit" class="active" ng-disabled="contactForm.$dirty && contactForm.$invalid" value="Keep me posted !" ng-click="sendUser()" style="border-radius: 10px;" /></div>
 								</div>
 							</form>
 						</div>
