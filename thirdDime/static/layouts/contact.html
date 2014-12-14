@@ -10,30 +10,31 @@
 					<div class="box container 75%">
 					
 					<!-- Contact Form -->	
-						<div class="canimate-show"  ng-show="isVisible">
+						<div class="animate-show"  ng-show="isVisible">
 							<form name="contactForm">
 								<div layout="row">
 									<div flex="60"><input type="email" name="email" placeholder="Email" ng-model="user.email" /></div>
-									<div flex="40"><input type="submit" ng-disabled="contactForm.$dirty && contactForm.$invalid" value="Keep me posted !" ng-click="sendUser()" /></div>
+									<div flex="40"><input type="submit" class="active" ng-disabled="contactForm.$dirty && contactForm.$invalid" value="Keep me posted !" ng-click="sendUser()" /></div>
 								</div>
 							</form>
 						</div>
-						<div class="canimate-show"  ng-hide="isVisible" layout-padding="10" layout-margin="10">
+						<br/>
+						<div class="animate-show" layout-padding="10" layout-margin="10">
 							<div layout="row" layout-align="center center">
 								<div flex="33">
-							        <md-button class="md-fab" aria-label="New document">
-								        <i class="fa fa-twitter"></i>
-								    </md-button>
+									<a href="http://in.pinterest.com/saikatchowdhury/thirddime-collection/" target="_blank">
+							        <img src="/static/images/social/pinterest.png" style="height: 100px; width: 100px" />
+							        </a>	
 							    </div>
 								<div flex="33">
-							        <md-button class="md-fab" aria-label="New document">
-								        <i class="fa fa-google"></i>
-								    </md-button>
+									<a href="https://twitter.com/thirddime" target="_blank">
+							        <img src="/static/images/social/twitter.png" style="height: 100px; width: 100px" />
+							        </a>
 							    </div>
 								<div flex="33">
-							        <md-button class="md-fab" aria-label="New document">
-								        <i class="fa fa-facebook"></i>
-								    </md-button>
+									<a href="https://www.facebook.com/pages/ThirdDime-Art/1518696245078520?fref=ts" target="_blank">
+							        <img src="/static/images/social/facebook.png" style="height: 100px; width: 100px" />
+							        </a>
 							    </div>
 							</div>
 						</div>
