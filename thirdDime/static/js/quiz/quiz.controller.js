@@ -28,8 +28,11 @@ angular.module("Quiz", ["ngMaterial", "Intro", "Que", "Funda"])
 					fundaDialog.locals.result = false;
 				}
 
-				$mdDialog.show(fundaDialog).then(function () {
+				$mdDialog.show(fundaDialog).then(function (val) {
 					quiz.flipped = !quiz.flipped;
+					if (val){
+						$scope.askQuestion(index+1);
+					}
 				}, function () {
 					quiz.flipped = !quiz.flipped;
 				});

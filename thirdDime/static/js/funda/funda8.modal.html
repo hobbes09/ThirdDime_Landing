@@ -1,5 +1,6 @@
-<md-dialog aria-label="Mango (Fruit)">
+<md-dialog aria-label="Mango (Fruit)" class="funda">
 	<md-content style="background-color: {{color}}; color: white;">
+		<div layout="row" layout-align="end"><md-button ng-click="fundaRoot(false)">Close</md-button></div>
 		<br/>
 		<br/>
 		<div layout="row" layout-align="center center">
@@ -12,8 +13,8 @@
 		<div layout="row" layout-align="center center">
 			<span flex="15"></span>
 			<span flex="70">
-				<h3>Hyperrealism is a genre of painting and sculpture resembling a high resolution photograph. It is a fully-fledged school of art and can be considered as an advancement of Photorealism by the methods used to create the resulting photorealistic paintings or sculptures. The term is primarily applied to an independent art movement and art style in the United States and Europe that has recently developed since the early 2000s.
-				</h3>
+			Hyperrealism is a genre of painting and sculpture resembling a high resolution photograph. It is a fully-fledged school of art and can be considered as an advancement of Photorealism by the methods used to create the resulting photorealistic paintings or sculptures. The term is primarily applied to an independent art movement and art style in the United States and Europe that has recently developed since the early 2000s.
+				
 			</span>
 			<span flex="15"></i></span>
 		</div>
@@ -22,4 +23,9 @@
 			<span flex="15"><i class="fa fa-quote-right"></i></span>
 		</div>
 	</md-content>
+	<div class="md-actions" layout="row">
+	    <md-button ng-click="fundaRoot(true)" class="md-primary">
+	      Next
+	    </md-button>
+    </div>
 </md-dialog> 

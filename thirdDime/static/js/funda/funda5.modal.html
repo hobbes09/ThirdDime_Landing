@@ -1,5 +1,6 @@
-<md-dialog aria-label="Mango (Fruit)">
+<md-dialog aria-label="Mango (Fruit)" class="funda">
 	<md-content style="background-color: {{color}}; color: white;">
+		<div layout="row" layout-align="end"><md-button ng-click="fundaRoot(false)" style="color: white;">Close</md-button></div>
 		<br/>
 		<br/>
 		<div layout="row" layout-align="center center">
@@ -13,14 +14,14 @@
 		<div layout="row" layout-align="center center">
 			<span flex="15"></span>
 			<span flex="70">
-				<h3>When we turn this painting, the rich trappings fade out and the ultimate victor comes into focus. Death eclipses everything.
-				</h3>
+			When we turn this painting, the rich trappings fade out and the ultimate victor comes into focus. Death eclipses everything.
+				
 				<div layout="row" layout-align="center center">
-		        	<img style="margin: auto; max-width: 100%;" src="/static/images/amb.gif" pagespeed_url_hash="3617274378" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+		        	<img style="margin: 10px; max-width: 100%;" src="/static/images/amb.gif" pagespeed_url_hash="3617274378" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
 		        </div>
-		        <h3>Well almost everything. There is a hidden crucifx in the painting .
+		       Well almost everything. There is a hidden crucifx in the painting .
 Holbein raises another question through this painting. is death really
-the ultimate victor ?</h3>
+the ultimate victor ?
 			</span>
 			<span flex="15"></i></span>
 		</div>
@@ -29,4 +30,9 @@ the ultimate victor ?</h3>
 			<span flex="15"><i class="fa fa-quote-right"></i></span>
 		</div>
 	</md-content>
+	<div class="md-actions" layout="row">
+	    <md-button ng-click="fundaRoot(true)" class="md-primary">
+	      Next
+	    </md-button>
+    </div>
 </md-dialog> 

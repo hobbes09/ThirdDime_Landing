@@ -1,6 +1,7 @@
-	<md-dialog aria-label="Mango (Fruit)">
-	<div ng-controller="ArmidaController">
+<md-dialog aria-label="Mango (Fruit)" class="funda">
+ 	<div ng-controller="ArmidaController">
 		<md-content style="background-color: {{color}}; color: white;">
+		<div layout="row" layout-align="end"><md-button ng-click="fundaRoot(false)">Close</md-button></div>
 			<div layout="row" layout-align="center center">
 				<span flex="15"></span>
 				<span flex="70">
@@ -18,5 +19,10 @@
 				<span flex="15"></i></span>
 			</div>
 		</md-content>
+		<div class="md-actions" layout="row">
+		    <md-button ng-click="fundaRoot(true)" class="md-primary">
+		      Next
+		    </md-button>
+	    </div>
 	</div>
 	</md-dialog> 

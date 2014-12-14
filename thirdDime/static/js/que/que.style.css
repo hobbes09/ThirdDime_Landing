@@ -1,0 +1,7 @@
+.que img {
+	/*border:10px solid #021a40;*/
+
+    box-shadow:2px 2px 10px 10px #021a40;
+	-webkit-box-shadow:2px 2px 10px 10px #021a40;
+	-moz-box-shadow:2px 2px 10px 10px #021a40;
+    }

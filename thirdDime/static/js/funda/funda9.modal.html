@@ -1,5 +1,6 @@
-<md-dialog aria-label="Mango (Fruit)">
+<md-dialog aria-label="Mango (Fruit)" class="funda">
 	<md-content style="background-color: {{color}}; color: white;">
+		<div layout="row" layout-align="end"><md-button ng-click="fundaRoot(false)">Close</md-button></div>
 		<br/>
 		<br/>
 		<div layout="row" layout-align="center center">
@@ -13,13 +14,13 @@
 		<div layout="row" layout-align="center center">
 			<span flex="15"></span>
 			<span flex="70">
-						<h3>Artists are historians and their art the journal. Undeniably, art is not only an expression of beauty and creativity; it is also a reflection of the times.Events such as war impact artists even deeper. <br/>
+					Artists are historians and their art the journal. Undeniably, art is not only an expression of beauty and creativity; it is also a reflection of the times.Events such as war impact artists even deeper. <br/>
 		The first painting is by Picasso where he depicts a massacre during the Korean war.<br/>
 		The second painting is by Otto Dix which represents a ruthless class struggle taking place in Germany.<br/>
 		The third painting is by Goya where he presents a scene from the Peninsular war.<br/>
 		The fourth painting is by Manet depicting the execution of Maximillian by a firing squad.<br/>
 		Goya's painting is the original inspiration. 
-				</h3>
+				
 			</span>
 			<span flex="15"></i></span>
 		</div>
@@ -28,4 +29,9 @@
 			<span flex="15"><i class="fa fa-quote-right"></i></span>
 		</div>
 	</md-content>
+	<div class="md-actions" layout="row">
+	    <md-button ng-click="fundaRoot(true)" class="md-primary">
+	      Next
+	    </md-button>
+    </div>
 </md-dialog> 

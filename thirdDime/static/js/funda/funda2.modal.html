@@ -1,5 +1,6 @@
-<md-dialog aria-label="Mango (Fruit)">
+<md-dialog aria-label="Mango (Fruit)" class="funda">
 	<md-content style="background-color: {{color}}; color: white;">
+		<div layout="row" layout-align="end"><md-button ng-click="fundaRoot(false)">Close</md-button></div>
 		<br/>
 		<br/>
 		<div layout="row" layout-align="center center">
@@ -13,10 +14,10 @@
 		<div layout="row" layout-align="center center">
 			<span flex="15"></span>
 			<span flex="70">
-				<h3>The theatrical drape of blood-red cloth looms in the upper portion of the canvas with the left portion leaving the painting’s frame, the artist possibly used this to show the Holy Virgin’s assumption into heaven.
-This painting illustrates the iconographic and formal revolution that Caravaggio instigated in the late 16th and early 17th centuries.He took on the task of translating people's reality and emotions without worrying about the conventions of representations of the sacred. The scene is very realistic, the body of the Virgin is not sacred except for the fine aureole at the top of its head. The painting fetched Caravaggio a lot of ridicule especially from the Church.</h3>
+				The theatrical drape of blood-red cloth looms in the upper portion of the canvas with the left portion leaving the painting’s frame, the artist possibly used this to show the Holy Virgin’s assumption into heaven.
+This painting illustrates the iconographic and formal revolution that Caravaggio instigated in the late 16th and early 17th centuries.He took on the task of translating people's reality and emotions without worrying about the conventions of representations of the sacred. The scene is very realistic, the body of the Virgin is not sacred except for the fine aureole at the top of its head. The painting fetched Caravaggio a lot of ridicule especially from the Church.
 				<div layout="row" layout-align="center center">
-		        	<img style="margin: auto; max-width: 100%;" src="/static/images/virgin.jpg" pagespeed_url_hash="3617274378" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+		        	<img style="margin: 10px; max-width: 100%;" src="/static/images/virgin.jpg" pagespeed_url_hash="3617274378" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
 		        </div>
 			</span>
 			<span flex="15"></i></span>
@@ -26,4 +27,9 @@ This painting illustrates the iconographic and formal revolution that Caravaggio
 			<span flex="15"><i class="fa fa-quote-right"></i></span>
 		</div>
 	</md-content>
+	<div class="md-actions" layout="row">
+	    <md-button ng-click="fundaRoot(true)" class="md-primary">
+	      Next
+	    </md-button>
+    </div>
 </md-dialog>
