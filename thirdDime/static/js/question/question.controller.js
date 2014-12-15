@@ -42,7 +42,7 @@ angular.module('Que', ['ngMaterial', 'Data'])
 
 	$scope.answer5 = function (val) {
 		var result = false;
-		if (val == "skull"){
+		if (val == "three"){
 			result = true;
 		}
 		$mdDialog.hide(result);

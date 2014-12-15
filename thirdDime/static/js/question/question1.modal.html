@@ -12,6 +12,14 @@
         <div layout="row" layout-align="end center" style="font-size: .77em;">Click on picture once to select.</div>
         <div layout="row" layout-align="end center" >
         	<img style="margin: 10px; max-width: 100%;" src="/static/images/starry.jpg" pagespeed_url_hash="3617274378" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" ng-click="answer1('cypress')" style="box-shadow: 0px 0px 0px 5px #000, 0px 0px 0px 10px #fff;"/>
+            <div flex="20" >
+                <md-radio-group >
+                    <md-radio-button value="Church" aria-label="Label 1" ng-click="answer1('church')">Church</md-radio-button>
+                    <md-radio-button value="Constellation" aria-label="Label 2" ng-click="answer1('constellation')"> Constellation </md-radio-button>
+                    <md-radio-button value="Cypress Tree" aria-label="Label 3" ng-click="answer1('cypress')">Cypress Tree</md-radio-button>
+                    <md-radio-button value="Moon" aria-label="Label 4" ng-click="answer1('moon')">Moon</md-radio-button>
+                </md-radio-group>       
+            </div>
         </div>
     </md-content>
 </md-dialog>
