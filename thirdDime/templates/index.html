@@ -14,6 +14,7 @@
 		<meta property="og:description" content="Behind the BrushStrokes." />
 		<meta property="og:image" content="http://thirddime.com/static/images/backup/memory.jpg" />
 		<meta property="og:type" content="website" />
+		<link rel="shortcut icon" type="image/png" href="/static/images/favicon.ico"/>
 		<noscript>
 			<link rel="stylesheet" href="static/css/skel.css" />
 			<link rel="stylesheet" href="static/css/style.css" />
@@ -41,6 +42,7 @@
 		<script src="static/vendor/original/jquery.scrollgress.min.js"></script>
 		<script src="static/vendor/original/skel.min.js"></script>
 		<script src="static/vendor/original/init.js"></script>
+		<script src="static/bower_components/angular/angular.min.js"></script>
 	</head>
 	<body ng-controller="AppController">
 		<!-- Intro -->
@@ -48,20 +50,21 @@
 				<div class="content container 100%">
 					<div layout="row" layout-align="center center">
 						<img src="/static/images/header-md.png" show-gt-md hide-sm hide-md>
-						<img src="/static/images/header-mb.png" hide-gt-md>
+						<img src="/static/images/header-tb.png" show-md hide-sm hide-gt-md>
+						<img src="/static/images/header-mb.png" hide-md hide-gt-md>
 					</div>
 					<header>
-						<h3>LAUNCHING SOON!!</h3>
+						<h2>LAUNCHING SOON!!</h2>
 					</header>
 					<!-- <p> <strong>Subscribe to our mailing list</strong> </p> -->
 					<!-- <br> <br> <br>  <br> <br> <br> <br> <br> -->
 					<div layout="row" layout-sm="column" layout-align="space-between center">
-						<div layout="row" layout-align="center center" class="animate-show"  ng-show="isVisible" flex="33" hide-sm>
+						<div layout="row" layout-align="center center" class="animate-show"  ng-show="isVisibleRoot" flex="33" hide-sm>
 							<input type="email" placeholder="  E-mail" ng-model="user.email" style="border-radius: 10px; height: 50px;" />
-							<md-button ng-click="sendUser()" style="background: #1975D1; border-radius: 10px; height: 50px; color: white; padding-right: 30px; padding-left: 20px">Subscribe</md-button>
+							<md-button ng-click="sendUser(1)" style="background: #1975D1; border-radius: 10px; height: 50px; color: white; padding-right: 30px; padding-left: 20px">Subscribe</md-button>
 						</div>
-						<div layout="row" layout-align="center center" class="animate-show"  ng-hide="isVisible">
-							<h4>Thank you. Please keep exploring.</h4>
+						<div layout="row" layout-align="center center" class="animate-show"  ng-hide="isVisibleRoot" flex="33">
+							<h4 ng-hide="isVisible1">Thank you. Please keep exploring.</h4>
 						</div>
 						<div flex="33">
 							<a href="#one" class="button style2 down">More</a>
@@ -79,12 +82,12 @@
 					<header>
 						<!-- <h2>What We Do</h2> -->
 					</header>
-					<p>Explore thoughts, art can inspire, through <strong>interpretations</strong> and <strong>stories</strong> </p>
-					<div layout="row" layout-align="center center" class="animate-show"  ng-show="isVisible">
+					<p>Explore thoughts, art can inspire, through <strong>interpretations</strong> and <strong>stories</strong>. Browse though a large collection of paintings and discover deeper layers behind each brushstroke.</p>
+					<div layout="row" layout-align="center center" class="animate-show"  ng-show="isVisibleRoot">
 						<input type="email" placeholder="  E-mail" ng-model="user.email" style="border-radius: 10px; height: 50px;" />
-						<md-button ng-click="sendUser()" style="background: #1975D1;  border-radius: 10px; height: 50px; color: white; padding: 10px 10px;">Subscribe</md-button>
+						<md-button ng-click="sendUser(2)" style="background: #1975D1;  border-radius: 10px; height: 50px; color: white; padding: 10px 10px;">Subscribe</md-button>
 					</div>
-					<div layout="row" layout-align="center center" class="animate-show"  ng-hide="isVisible">
+					<div layout="row" layout-align="center center" class="animate-show"  ng-hide="isVisible2">
 						<h4>ThankYou. Please keep Exploring.</h4>
 					</div>
 				</div>
@@ -127,28 +130,29 @@
 						</ul>
 					</div>
 				</div>
+				<a href="#contact" class="button style2 down anchored">Next</a>
 			</section>
 			
 		<!-- Contact -->
 			<section id="contact" class="main style3 secondary">
 				<div class="content container">
 					<header>
-						<div class="animate-show" ng-show="isVisible">
+						<div class="animate-show" ng-show="isVisibleRoot">
 							<h2>Want to discover more such artworks</h2>
 							<p>Join our mailing list.</p>
 						</div>
-						<div class="animate-show" ng-hide="isVisible">
+						<div class="animate-show" ng-hide="isVisible3">
 							<h2>Thank you for subscribing. More interesting artworks are coming your way soon.</h2>
 						</div>
 					</header>
 					<div class="box container 75%">
 					
 					<!-- Contact Form -->	
-						<div class="animate-show"  ng-show="isVisible">
+						<div class="animate-show"  ng-show="isVisibleRoot">
 							<form name="contactForm">
 								<div layout="row" layout-sm="column" layout-align="center center">
 									<div flex="50"><div layout="row"><input type="email" name="email" placeholder="Email" ng-model="user.email" style="border: 2px solid #dadada;" /></div></div>
-									<div flex="50"><input type="submit" class="active" ng-disabled="contactForm.$dirty && contactForm.$invalid" value="Keep me posted !" ng-click="sendUser()" style="border-radius: 10px;" /></div>
+									<div flex="50"><input type="submit" class="active" ng-disabled="contactForm.$dirty && contactForm.$invalid" value="Keep me posted !" ng-click="sendUser(3)" style="border-radius: 10px;" /></div>
 								</div>
 							</form>
 						</div>
@@ -160,7 +164,7 @@
 								<!-- <div flex="20"></div> -->
 								<div layout="row" layout-align="center center">
 									<div flex="33">
-										<a href="http://in.pinterest.com/saikatchowdhury/thirddime-collection/" target="_blank">
+										<a href="http://www.pinterest.com/thirddime/thirddime-art/" target="_blank">
 								        <img src="/static/images/social/pinterest.png" style="height: 75px; width: 75px" />
 								        </a>	
 								    </div>
@@ -197,7 +201,6 @@
 			</footer>
 
 		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script src="static/bower_components/angular/angular.min.js"></script>
 	    <script src="static/bower_components/angular-aria/angular-aria.js"></script>
 	    <script src="static/bower_components/hammerjs/hammer.js"></script>
 	    <script src="static/vendor/angular-material/angular-material.js"></script>

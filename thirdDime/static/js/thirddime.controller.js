@@ -1,11 +1,15 @@
 angular.module("ThirdDime")
 .controller("AppController", ["$scope", "data", function ($scope, data) {
-	$scope.isVisible = true;
+	$scope.isVisibleRoot = true;
+	$scope.isVisible1 = true;
+	$scope.isVisible2 = true;
+	$scope.isVisible3 = true;
 	$scope.user = {email: ""};
 
-	$scope.sendUser = function () {
+	$scope.sendUser = function (val) {
 		data.putUser($scope.user).then(function () {
-		$scope.isVisible = false;
+		$scope.isVisibleRoot = false;
+		$scope["isVisible"+val] = false;
 		});
 	};
 }]);
