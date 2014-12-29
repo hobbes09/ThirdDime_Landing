@@ -4,9 +4,19 @@ module.exports = function (grunt) {
 
 		clean: [ 'static/build', '.tmp'],
 		copy: {
-			build: {
-				src: 'templates/index.html',
-				dest: '.tmp/index.html'
+			build:{
+				files: [
+					{
+						expand: true,
+						cwd: './static/build/static/build',
+						src: '*',
+						dest: './static/build'
+					},
+					{
+						src: 'templates/index.html',
+						dest: '.tmp/index.html'
+					},
+				],
 			},
 			cleanBuild: {
 				src: '.tmp/index.html',
@@ -26,13 +36,7 @@ module.exports = function (grunt) {
 		},
 	});
 
-    grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-filerev');
-    grunt.loadNpmTasks('grunt-usemin');
+    require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
     grunt.registerTask('build', [
 	  'useminPrepare',
