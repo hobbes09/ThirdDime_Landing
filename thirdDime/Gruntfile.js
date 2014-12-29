@@ -3,18 +3,16 @@ module.exports = function (grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 
 		clean: [ 'static/build', '.tmp'],
-		gitreset: {
-		        task: {
-		            options: {
-		                mode: 'hard',
-		                commit: 'HEAD'
-		            },
-		            files: {
-		            	src: 'templates/index.html'
-		            }
-		        }
-		    },
-
+		copy: {
+			build: {
+				src: 'templates/index.html',
+				dest: '.tmp/index.html'
+			},
+			cleanBuild: {
+				src: '.tmp/index.html',
+				dest: 'templates/index.html'
+			}
+		},
 		useminPrepare: {
 			html: 'templates/index.html',
             options: {
@@ -29,7 +27,7 @@ module.exports = function (grunt) {
 	});
 
     grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-git');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -41,8 +39,9 @@ module.exports = function (grunt) {
 	  'concat:generated',
 	  'cssmin:generated',
 	  'uglify:generated',
+	  'copy:build',
 	  'usemin'
 	]);
 
-	grunt.registerTask('cleanBuild', ['clean', ]);
+	grunt.registerTask('cleanBuild', ['copy:cleanBuild', 'clean']);
 };
