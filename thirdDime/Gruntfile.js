@@ -1,6 +1,18 @@
 module.exports = function (grunt) {
+    "use strict";
+    
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+
+		jshint: {
+		    options: {
+		    	jshintrc: true,
+		    	reporter: require('jshint-stylish')
+		    },
+		    files: {
+		        src: ['Gruntfile.js','static/js/**/*.js']
+		    },
+		},
 
 		clean: [ 'static/build', '.tmp'],
 		copy: {
