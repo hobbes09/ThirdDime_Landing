@@ -1,5 +1,7 @@
 angular.module("ThirdDime")
 .controller("AppController", ["$scope", "data", function ($scope, data) {
+	"use strict";
+
 	$scope.isVisibleRoot = true;
 	$scope.isVisible1 = true;
 	$scope.isVisible2 = true;

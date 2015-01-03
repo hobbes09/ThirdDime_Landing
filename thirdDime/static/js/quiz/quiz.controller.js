@@ -1,5 +1,7 @@
 angular.module("Quiz", ["ngMaterial", "Intro", "Que", "Funda"])
 .controller("QuizController", ['$scope', '$mdDialog', function ($scope, $mdDialog) {
+	"use strict";
+
 	$scope.quizes = [
 		{"color": "#3F51B5", "intro": "In Death, the union of heaven and earth", "flipped": false},
 		{"color": "#825682", "intro": "That the Immaculate Mother of God, the ever Virgin Mary, having completed the course of her earthly life, was borne by angels into heaven", "flipped": false},
@@ -16,9 +18,9 @@ angular.module("Quiz", ["ngMaterial", "Intro", "Que", "Funda"])
 	$scope.askQuestion = function (index) {
 		var result = false;
 		var quiz = $scope.quizes[index];
-		introDialog = {templateUrl: "static/js/intro/intro.modal.html", controller: "IntroController", locals: {"intro": quiz.intro, 'color': quiz.color}};
-		queDialog = {templateUrl: "static/js/question/question" + (index+1) + ".modal.html", controller: "QueController", locals: {"index": index}};
-		fundaDialog = {templateUrl: "static/js/funda/funda" + (index+1) + ".modal.html", controller: "FundaController", locals : {"result": result, 'color': quiz.color}};
+		var introDialog = {templateUrl: "static/js/intro/intro.modal.html", controller: "IntroController", locals: {"intro": quiz.intro, 'color': quiz.color}};
+		var queDialog = {templateUrl: "static/js/question/question" + (index+1) + ".modal.html", controller: "QueController", locals: {"index": index}};
+		var fundaDialog = {templateUrl: "static/js/funda/funda" + (index+1) + ".modal.html", controller: "FundaController", locals : {"result": result, 'color': quiz.color}};
 
 		$mdDialog.show(introDialog).then(function () {
 			$mdDialog.show(queDialog).then(function (val) {
