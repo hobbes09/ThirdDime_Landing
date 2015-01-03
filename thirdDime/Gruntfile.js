@@ -14,9 +14,19 @@ module.exports = function (grunt) {
 		    },
 		},
 
-		clean: [ 'static/build', '.tmp'],
+		htmlmin: {
+		    main: {
+		        files: [{
+			        expand: true,
+			        src: ['templates/*.html', 'static/js/**/*.html', 'static/layouts/**/*.html'],
+			        dest: "."
+		        }]
+		    }
+		},
+
+		clean: [ 'static/build', '.tmp', '.htmlminTmp'],
 		copy: {
-			build:{
+			preusemin:{
 				files: [
 					{
 						expand: true,
@@ -30,9 +40,22 @@ module.exports = function (grunt) {
 					},
 				],
 			},
+			prehtmlmin:{
+				files: [{
+						expand: true,
+						src: ['templates/*.html', 'static/js/**/*.html', 'static/layouts/**/*.html'],
+						dest: '.htmlminTmp'
+					}]
+			},
 			cleanBuild: {
-				src: '.tmp/index.html',
-				dest: 'templates/index.html'
+				files: [{
+					src: '.tmp/index.html',
+					dest: 'templates/index.html'},
+					{
+						expand: true,
+						cwd: '.htmlminTmp',
+						src: '**',
+						dest: '.'}]
 			}
 		},
 		useminPrepare: {
@@ -47,27 +70,28 @@ module.exports = function (grunt) {
 			html: ['templates/index.html']
 		},
 
-		imagemin: {                          // Task
-		    dynamic: {                         // Another target
+		imagemin: {
+		    dynamic: {
 		      files: [{
-		        expand: true,                  // Enable dynamic expansion
-		        src: ['static/images/**/*.{png,jpg,gif}'],   // Actual patterns to match
+		        expand: true,
+		        src: ['static/images/**/*.{png,jpg,gif}'],
 		      }]
 		    }
-		 }
-
+		 },
 	});
 
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
     grunt.registerTask('build', [
-	  'useminPrepare',
-	  'concat:generated',
-	  'cssmin:generated',
-	  'uglify:generated',
-	  'copy:build',
-	  'usemin',
-	  'imagemin'
+    	'copy:prehtmlmin',
+    	'htmlmin',
+	    'useminPrepare',
+	    'concat:generated',
+	    'cssmin:generated',
+	    'uglify:generated',
+	    'copy:preusemin',
+	    'usemin',
+	    'imagemin'
 	]);
 
 	grunt.registerTask('cleanBuild', ['copy:cleanBuild', 'clean']);
