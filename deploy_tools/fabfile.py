@@ -16,6 +16,7 @@ def deploy():
     _update_bower(source_folder)
     _update_static_files(source_folder)
     _update_database(source_folder)
+    _build_client(source_folder)
 
 
 def _create_directory_structure_if_necessary(site_folder):
@@ -57,6 +58,8 @@ def _update_virtualenv(source_folder):
 def _update_bower(source_folder):
     run('cd %s/thirdDime/static && bower install' % (source_folder, ))
 
+def _build_client(source_folder):
+    run('cd %s/thirdDime && npm install && grunt build' % (source_folder,))
 
 def _update_static_files(source_folder):
     run('cd %s && ../virtualenv/bin/python manage.py collectstatic --noinput' % (
