@@ -46,6 +46,16 @@ module.exports = function (grunt) {
 		usemin: {
 			html: ['templates/index.html']
 		},
+
+		imagemin: {                          // Task
+		    dynamic: {                         // Another target
+		      files: [{
+		        expand: true,                  // Enable dynamic expansion
+		        src: ['static/images/**/*.{png,jpg,gif}'],   // Actual patterns to match
+		      }]
+		    }
+		 }
+
 	});
 
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
@@ -56,7 +66,8 @@ module.exports = function (grunt) {
 	  'cssmin:generated',
 	  'uglify:generated',
 	  'copy:build',
-	  'usemin'
+	  'usemin',
+	  'imagemin'
 	]);
 
 	grunt.registerTask('cleanBuild', ['copy:cleanBuild', 'clean']);
