@@ -1,11 +1,18 @@
 <md-dialog aria-label="Mango (Fruit)" class="funda">
-	<md-content style="background-color: {{color}}; color: white;">
-		<br/><br/>
+	<md-content style="background-color: {{color}}; color: white">
+		<br><br>
 	We hope you liked this experience. There is plenty more heading your ally. Meanwhile we would love to hear your thoughts on this painting. Give us a peek on our FB page. ;)
 	</md-content>
-	<div class="md-actions" layout="row" style="background-color: {{color}}; color: black;">
-	    <md-button href="https://www.facebook.com/pages/ThirdDime-Art/1518696245078520?fref=ts" target="_blank" style="color: black;">
+	<div class="md-actions" layout="row" style="background-color: {{color}}; color: black">
+		<ul ng-social-buttons data-url="'http://thirddime.com'" data-title="'ThirdDime'" data-description="'Behind the BrushStrokes'" data-image="'http://thirddime.com/static/images/p2.jpg'">
+		    <li> SHARE QUIZ:</li>
+		    <li class="ng-social-facebook">FaceBook</li>
+		    <li class="ng-social-google-plus">Google+</li>
+		    <li class="ng-social-twitter">Twitter</li>
+		    <li class="ng-social-pinterest">Pinterest</li>
+		</ul>
+	    <!-- <md-button href="https://www.facebook.com/pages/ThirdDime-Art/1518696245078520?fref=ts" target="_blank" style="color: black">
 	      Facebook
-	    </md-button>
+	    </md-button> -->
   </div>
 </md-dialog>
