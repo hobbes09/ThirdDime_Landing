@@ -1,6 +1,6 @@
 <md-dialog aria-label="Mango (Fruit)" class="que">
-  <md-content style="background-color: {{color}};">
-    <md-subheader class="md-sticky" style="background-color: {{color}};">
+  <md-content style="background-color: {{color}}">
+    <md-subheader class="md-sticky" style="background-color: {{color}}">
         <div layout="row">
             <i class="fa fa-paint-brush"> </i>
                 <div class="qStyle">
@@ -8,7 +8,7 @@
                 </div>
         </div>
       </md-subheader>
-        <div layout="row" layout-align="end center" style="font-size: .77em;">Click on an image to select.</div>
+        <div layout="row" layout-align="end center" style="font-size: .77em">Click on an image to select.</div>
   	<md-tabs md-selected="data.selectedIndex">
       <md-tab id="tab1" aria-controls="tab1-content">
         Item One
@@ -25,16 +25,16 @@
     </md-tabs>
     <ng-switch on="data.selectedIndex" class="tabpanel-container">
         <div role="tabpanel" id="tab1-content" aria-labelledby="tab1" ng-switch-when="0" md-swipe-left="next()" md-swipe-right="previous()" layout="row" layout-align="center center">
-        	<img style="margin: 10px; max-width: 100%;" src="/static/images/inspire1.jpg" pagespeed_url_hash="3617274378" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" ng-click="answer9('One')">
+        	<img style="margin: 10px; max-width: 100%" src="/static/images/inspire1.jpg" pagespeed_url_hash="3617274378" onload="pagespeed.CriticalImages.checkImageForCriticality(this)" ng-click="answer9('One')">
         </div>
         <div role="tabpanel" id="tab2-content" aria-labelledby="tab2" ng-switch-when="1" md-swipe-left="next()" md-swipe-right="previous()" layout="row" layout-align="center center">
-        	<img style="margin: 10px; max-width: 100%;" src="/static/images/inspire2.jpg" pagespeed_url_hash="3617274378" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" ng-click="answer9('Two')">
+        	<img style="margin: 10px; max-width: 100%" src="/static/images/inspire2.jpg" pagespeed_url_hash="3617274378" onload="pagespeed.CriticalImages.checkImageForCriticality(this)" ng-click="answer9('Two')">
         </div>
         <div role="tabpanel" id="tab3-content" aria-labelledby="tab3" ng-switch-when="2" md-swipe-left="next()" md-swipe-right="previous()" layout="row" layout-align="center center">
-          <img style="margin: 10px; max-width: 100%;" src="/static/images/inspire3.jpg" pagespeed_url_hash="3617274378" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" ng-click="answer9('Three')">
+          <img style="margin: 10px; max-width: 100%" src="/static/images/inspire3.jpg" pagespeed_url_hash="3617274378" onload="pagespeed.CriticalImages.checkImageForCriticality(this)" ng-click="answer9('Three')">
         </div>
         <div role="tabpanel" id="tab4-content" aria-labelledby="tab4" ng-switch-when="3" md-swipe-left="next()" md-swipe-right="previous()" layout="row" layout-align="center center">
-          <img style="margin: 10px; max-width: 100%;" src="/static/images/inspire4.jpg" pagespeed_url_hash="3617274378" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" ng-click="answer9('Four')">
+          <img style="margin: 10px; max-width: 100%" src="/static/images/inspire4.jpg" pagespeed_url_hash="3617274378" onload="pagespeed.CriticalImages.checkImageForCriticality(this)" ng-click="answer9('Four')">
         </div>
     </ng-switch>
     <div class="after-tabs-area" layout="row" layout-sm="column" layout-margin layout-align="left center">

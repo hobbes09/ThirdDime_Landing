@@ -3,8 +3,8 @@
 		<div ng-repeat="quiz in quizes">
 			<div class="card" ng-click="askQuestion($index)">
 				<div class="flipper" ng-class="{hover: !quiz.flipped}">
-					<img ng-hide="quiz.flipped" ng-src="/static/images/thumbs/sun{{$index+1}}.jpg" style="height: 100px; width:100px;" >
-					<img ng-show="quiz.flipped" ng-src="/static/images/thumbs/test{{$index+1}}.jpg" style="height: 100px; width:100px;" >
+					<img ng-hide="quiz.flipped" ng-src="/static/images/thumbs/sun{{$index+1}}.jpg" style="height: 100px; width:100px">
+					<img ng-show="quiz.flipped" ng-src="/static/images/thumbs/test{{$index+1}}.jpg" style="height: 100px; width:100px">
 				</div>
 			</div>
 		</div>
