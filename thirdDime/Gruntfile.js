@@ -92,8 +92,7 @@ module.exports = function (grunt) {
 	    'cssmin:generated',
 	    'uglify:generated',
 	    'copy:preusemin',
-	    'usemin',
-	    'imagemin'
+	    'usemin'
 	]);
 
 	grunt.registerTask('cleanBuild', ['copy:cleanBuild', 'clean']);
