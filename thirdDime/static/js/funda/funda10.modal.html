@@ -6,10 +6,10 @@
 	<div class="md-actions" layout="row" style="background-color: {{color}}; color: black">
 		<ul ng-social-buttons data-url="'http://thirddime.com'" data-title="'ThirdDime'" data-description="'Behind the BrushStrokes'" data-image="'http://thirddime.com/static/images/p2.jpg'">
 		    <li> SHARE QUIZ:</li>
-		    <li class="ng-social-facebook">FaceBook</li>
-		    <li class="ng-social-google-plus">Google+</li>
-		    <li class="ng-social-twitter">Twitter</li>
-		    <li class="ng-social-pinterest">Pinterest</li>
+		    <li class="ng-social-facebook" analytics-on="click"  analytics-event="SocShareInQuizFB">FaceBook</li>
+		    <li class="ng-social-google-plus" analytics-on="click"  analytics-event="SocShareInQuizG+">Google+</li>
+		    <li class="ng-social-twitter" analytics-on="click"  analytics-event="SocShareInQuizTwtr">Twitter</li>
+		    <li class="ng-social-pinterest" analytics-on="click"  analytics-event="SocShareInQuizPin">Pinterest</li>
 		</ul>
   </div>
 </md-dialog>

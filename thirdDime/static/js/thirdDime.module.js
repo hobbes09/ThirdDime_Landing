@@ -1,4 +1,4 @@
-angular.module("ThirdDime", ["Quiz", "ngSocial", "Data", "ngAnimate"])
+angular.module("ThirdDime", ["Quiz", "ngSocial", "Data", "ngAnimate", "angulartics", "angulartics.google.analytics", "angulartics.mixpanel"])
 .config(['$httpProvider', function ($httpProvider) {
 	"use strict";
 
