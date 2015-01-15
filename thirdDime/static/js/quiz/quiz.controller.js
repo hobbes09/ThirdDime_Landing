@@ -18,7 +18,7 @@ angular.module("Quiz", ["ngMaterial", "Intro", "Que", "Funda"])
 	$scope.askQuestion = function (index) {
 		var result = false;
 		var quiz = $scope.quizes[index];
-		var introDialog = {templateUrl: "static/js/intro/intro.modal.html", controller: "IntroController", locals: {"intro": quiz.intro, 'color': quiz.color}};
+		var introDialog = {templateUrl: "static/js/intro/intro.modal.html", controller: "IntroController", locals: {"intro": quiz.intro, 'color': quiz.color, 'index': index}};
 		var queDialog = {templateUrl: "static/js/question/question" + (index+1) + ".modal.html", controller: "QueController", locals: {"index": index}};
 		var fundaDialog = {templateUrl: "static/js/funda/funda" + (index+1) + ".modal.html", controller: "FundaController", locals : {"result": result, 'color': quiz.color}};
 
