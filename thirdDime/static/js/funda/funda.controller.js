@@ -13,7 +13,7 @@ angular.module("Funda", ['ngMaterial', "Data"])
 	};
 
 	$scope.goBack = function () {
-		$mdDialog.hide(false);
+		$mdDialog.hide("back");
 	};
 
 }])

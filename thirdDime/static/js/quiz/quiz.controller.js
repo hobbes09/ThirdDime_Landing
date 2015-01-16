@@ -27,10 +27,10 @@ angular.module("Quiz", ["ngMaterial", "Intro", "Que", "Funda"])
 
 		$mdDialog.show(fundaDialog).then(function (val) {
 			quiz.flipped = !quiz.flipped;
-			if (val){
-				$scope.showIntro(index+1);
-			} else {
+			if (val === "back"){
 				showQue(index);
+			} else if (val){
+				$scope.showIntro(index+1);
 			}
 		}, function () {
 			quiz.flipped = !quiz.flipped;
