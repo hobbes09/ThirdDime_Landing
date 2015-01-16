@@ -1,104 +1,27 @@
 <md-dialog aria-label="Mango (Fruit)" class="que">
-  <md-content style="background-color: {{color}}">
-	<div layout="row" layout-align="space-between">
-		<div><md-button ng-click="goBack()">Back</md-button></div>
-		<div><md-button ng-click="cancel()">Close</md-button></div>
-	</div>
-    <md-subheader class="md-sticky" style="background-color: {{color}}">
-        <div layout="row">
-            <i class="fa fa-paint-brush"> </i>
+	<md-content style="background-color: {{color}}">
+		<div layout="row" layout-align="space-between">
+			<div><md-button ng-click="goBack()">Back</md-button></div>
+			<div><md-button ng-click="cancel()">Close</md-button></div>
+		</div>
+    	<md-subheader class="md-sticky" style="background-color: {{color}}">
+    		<div layout="row">
+        		<i class="fa fa-paint-brush"> </i>
                 <div class="qStyle">
-                    Each art movement produced work with some unique inherent characters. See if you can tag the following correctly:
+                    What object has the artist used to represent Assumption of Mary into Heaven ?
                 </div>
-        </div>
-      </md-subheader>
-        <div layout="row" layout-align="end center" style="font-size: .77em">Options at bottom.</div>
-  	<md-tabs md-selected="data.selectedIndex">
-      <md-tab id="tab1" aria-controls="tab1-content">
-        Item One
-      </md-tab>
-      <md-tab id="tab2" aria-controls="tab2-content">
-        Item Two
-      </md-tab>
-      <md-tab id="tab3" aria-controls="tab3-content">
-        Item Three
-      </md-tab>
-      <md-tab id="tab4" aria-controls="tab4-content">
-        Item four
-      </md-tab>
-    </md-tabs>
-    <ng-switch on="data.selectedIndex" class="tabpanel-container">
-        <div role="tabpanel" id="tab1-content" aria-labelledby="tab1" ng-switch-when="0" md-swipe-left="next()" md-swipe-right="previous()" layout="row" layout-align="center center">
-        	<img style="margin: 10px; max-width: 100%" src="/static/images/test1.jpg" pagespeed_url_hash="3617274378" onload="pagespeed.CriticalImages.checkImageForCriticality(this)">
-          <div flex="20">
-            <div layout="column">
-              <div flex ng-show="showResult61"><br><br>
-                <div ng-show="result61"><h1>CORRECT !</h1></div>
-                <div ng-hide="result61"><h1>It is FUTURISM</h1></div>
-              </div>
-              <md-radio-group ng-model="movement.paint1" flex="70">
-                <md-radio-button value="Impressionism" aria-label="Label 1" ng-click="answer61('Impressionism')">Impressionism [Light]</md-radio-button>
-                <md-radio-button value="Fauvism" aria-label="Label 2" ng-click="answer61('Fauvism')"> Fauvism [Color]</md-radio-button>
-                <md-radio-button value="Cubism" aria-label="Label 3" ng-click="answer61('Cubism')">Cubism [Space]</md-radio-button>
-                <md-radio-button value="Futurism" aria-label="Label 4" ng-click="answer61('Futurism')">Futurism [Motion]</md-radio-button>
-              </md-radio-group>
+    		</div>
+    	</md-subheader>
+        <div layout="row" layout-align="end center" style="font-size: .77em">Choose from the options below</div>
+        <div layout="row" layout-align="center center">
+        	<img style="margin: 10px; max-width: 100%" src="/static/images/virgin.jpg" pagespeed_url_hash="3617274378" onload="pagespeed.CriticalImages.checkImageForCriticality(this)">
+            <div flex="20">
+                <md-radio-group>
+                    <md-radio-button value="Girl in front" aria-label="Label 1" ng-click="answer2('Girl')">Girl in front</md-radio-button>
+                    <md-radio-button value="Drapes" aria-label="Label 2" ng-click="answer2('Drapes')"> Drapes </md-radio-button>
+                    <md-radio-button value="Man in center" aria-label="Label 3" ng-click="answer2('Man')">Man in center</md-radio-button>
+                </md-radio-group>       
             </div>
-          </div>
         </div>
-        <div role="tabpanel" id="tab2-content" aria-labelledby="tab2" ng-switch-when="1" md-swipe-left="next()" md-swipe-right="previous()" layout="row" layout-align="center center">
-        	<img style="margin: 10px; max-width: 100%" src="/static/images/test2.jpg" pagespeed_url_hash="3617274378" onload="pagespeed.CriticalImages.checkImageForCriticality(this)">
-          <div flex="20">
-            <div layout="column">
-              <div flex ng-show="showResult62"><br><br>
-                <div ng-show="result62"><h1>CORRECT !</h1></div>
-                <div ng-hide="result62"><h1>It is FAUVISM</h1></div>
-              </div>
-              <md-radio-group ng-model="movement.paint2" flex="70">
-                <md-radio-button value="Impressionism" aria-label="Label 1" ng-click="answer62('Impressionism')">Impressionism [Light]</md-radio-button>
-                <md-radio-button value="Fauvism" aria-label="Label 2" ng-click="answer62('Fauvism')"> Fauvism [Color]</md-radio-button>
-                <md-radio-button value="Cubism" aria-label="Label 3" ng-click="answer62('Cubism')">Cubism [Space]</md-radio-button>
-                <md-radio-button value="Futurism" aria-label="Label 4" ng-click="answer62('Futurism')">Futurism [Motion]</md-radio-button>
-              </md-radio-group>
-            </div>
-          </div>
-        </div>
-        <div role="tabpanel" id="tab3-content" aria-labelledby="tab3" ng-switch-when="2" md-swipe-left="next()" md-swipe-right="previous()" layout="row" layout-align="center center">
-          <img style="margin: 10px; max-width: 100%" src="/static/images/test3.jpg" pagespeed_url_hash="3617274378" onload="pagespeed.CriticalImages.checkImageForCriticality(this)">
-          <div flex="20">
-            <div layout="column">
-              <div flex ng-show="showResult63"><br><br>
-                <div ng-show="result63"><h1>CORRECT !</h1></div>
-                <div ng-hide="result63"><h1>It is IMPRESSIONISM</h1></div>
-              </div>
-              <md-radio-group ng-model="movement.paint3" flex="70">
-                <md-radio-button value="Impressionism" aria-label="Label 1" ng-click="answer63('Impressionism')">Impressionism [Light]</md-radio-button>
-                <md-radio-button value="Fauvism" aria-label="Label 2" ng-click="answer63('Fauvism')"> Fauvism [Color]</md-radio-button>
-                <md-radio-button value="Cubism" aria-label="Label 3" ng-click="answer63('Cubism')">Cubism [Space]</md-radio-button>
-                <md-radio-button value="Futurism" aria-label="Label 4" ng-click="answer63('Futurism')">Futurism [Motion]</md-radio-button>
-              </md-radio-group>
-            </div>
-          </div>
-        </div>
-        <div role="tabpanel" id="tab4-content" aria-labelledby="tab4" ng-switch-when="3" md-swipe-left="next()" md-swipe-right="previous()" layout="row" layout-align="center center">
-          <img style="margin: 10px; max-width: 100%" src="/static/images/test4.jpg" pagespeed_url_hash="3617274378" onload="pagespeed.CriticalImages.checkImageForCriticality(this)">
-          <div flex="20">
-            <div layout="column">
-              <div flex ng-show="showResult64"><br><br>
-                <div ng-show="result64"><h1>CORRECT !</h1></div>
-                <div ng-hide="result64"><h1>It is CUBISM</h1></div>
-              </div>
-            </div>
-              <md-radio-group ng-model="movement.paint4" flex="70">
-                <md-radio-button value="Impressionism" aria-label="Label 1" ng-click="answer64('Impressionism')">Impressionism [Light]</md-radio-button>
-                <md-radio-button value="Fauvism" aria-label="Label 2" ng-click="answer64('Fauvism')"> Fauvism [Color]</md-radio-button>
-                <md-radio-button value="Cubism" aria-label="Label 3" ng-click="answer64('Cubism')">Cubism [Space]</md-radio-button>
-                <md-radio-button value="Futurism" aria-label="Label 4" ng-click="answer64('Futurism')">Futurism [Motion]</md-radio-button>
-              </md-radio-group>
-          </div>
-        </div>
-    </ng-switch>
-    <div class="after-tabs-area" layout="row" layout-sm="column" layout-margin layout-align="left center">
-        
-    </div>
-  </md-content>
+    </md-content>
 </md-dialog>

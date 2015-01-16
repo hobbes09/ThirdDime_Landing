@@ -1,39 +1,32 @@
 <md-dialog aria-label="Mango (Fruit)" class="funda">
-	<md-content style="background-color: {{color}}; color: white">
+	<div ng-controller="DaliController">
+		<md-content style="background-color: {{color}}; color: white">
 		<div layout="row" layout-align="end"><md-button ng-click="fundaRoot(false)">Close</md-button></div>
-		<br>
-		<br>
-		<div layout="row" layout-align="center center">
-			<div ng-show="result"> <h1>CORRECT !</h1></div>
-			<div ng-hide="result"> <h1>The Red Drapes</h1></div>
-		</div>
-		<div layout="row" layout-align="center center" align="right">
-			<span flex="15"><i class="fa fa-quote-left"></i></span>
-			<span flex="85"></span>
-		</div>
-		<div layout="row" layout-align="center center">
-			<span flex="15"></span>
-			<span flex="70">
-				<p><strong>The theatrical drape of blood-red cloth looms in the upper portion of the canvas with the left portion leaving the painting’s frame, the artist possibly used this to show the Holy Virgin’s assumption into heaven. </strong>
-This painting illustrates the iconographic and formal revolution that Caravaggio instigated in the late 16th and early 17th centuries.He took on the task of translating people's reality and emotions without worrying about the conventions of representations of the sacred. The scene is very realistic, the body of the Virgin is not sacred except for the fine aureole at the top of its head. The painting fetched Caravaggio a lot of ridicule especially from the Church.
-				</p>
-				<div layout="row" layout-align="center center">
-		        	<img style="margin: 10px; max-width: 100%" src="/static/images/virgin_funda.jpg" pagespeed_url_hash="3617274378" onload="pagespeed.CriticalImages.checkImageForCriticality(this)">
-		        </div>
-			</span>
-			<span flex="15"></span>
-		</div>
-		<div layout="row" layout-align="center center">
-			<span flex="85"></span>
-			<span flex="15"><i class="fa fa-quote-right"></i></span>
-		</div>
-	</md-content>
-	<div class="md-actions" layout="row">
-	    <md-button ng-click="goBack()" class="md-primary">
-	      Back
-	    </md-button>
-	    <md-button ng-click="fundaRoot(true)" class="md-primary">
-	      Next
-	    </md-button>
-    </div>
+			<div layout="row" layout-align="center center">
+				<span flex="15"></span>
+				<span flex="70">
+					<h4>Dali is considering the relationship between the universe as seen through Einstein, the subconscious state, as depicted through Freud, put together with the surrealist perspective of the world. 
+	Now let’s see what the others had to say about it -
+					</h4>
+						<h5>Death and Decay ({{vote31}}%)</h5>
+						<md-progress-linear md-theme="red" md-mode="determinate" ng-value="vote31"></md-progress-linear>
+						<h5>Relavity's idea of time ({{vote32}}%)</h5>
+						<md-progress-linear md-theme="brown" md-mode="determinate" ng-value="vote32"></md-progress-linear>
+						<h5>Dream state ({{vote33}}%)</h5>
+						<md-progress-linear md-theme="green" md-mode="determinate" ng-value="vote33"></md-progress-linear>
+						<h5>Fluidity of time ({{vote34}}%)</h5>
+						<md-progress-linear md-theme="yellow" md-mode="determinate" ng-value="vote34"></md-progress-linear>
+				</span>
+				<span flex="15"></span>
+			</div>
+		</md-content>
+		<div class="md-actions" layout="row">
+		    <md-button ng-click="goBack()" class="md-primary">
+		      Back
+		    </md-button>
+		    <md-button ng-click="fundaRoot(true)" class="md-primary">
+		      Next
+		    </md-button>
+	    </div>
+	</div>
 </md-dialog>
