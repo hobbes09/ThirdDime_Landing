@@ -1,7 +1,7 @@
 <div ng-controller="QuizController">
 	<div layout="row" layout-sm="column" layout-md="column" layout-align="center center">
 		<div ng-repeat="quiz in quizes">
-			<div class="card" ng-click="askQuestion($index)" analytics-on="click"  analytics-event="queThumb{{$index+1}}">
+			<div class="card" ng-click="showIntro($index)" analytics-on="click"  analytics-event="queThumb{{$index+1}}">
 				<div class="flipper" ng-class="{hover: !quiz.flipped}">
 					<img ng-hide="quiz.flipped" ng-src="/static/images/thumbs/sun{{$index+1}}.jpg" style="height: 100px; width:100px">
 					<img ng-show="quiz.flipped" ng-src="/static/images/thumbs/test{{$index+1}}.jpg" style="height: 100px; width:100px">

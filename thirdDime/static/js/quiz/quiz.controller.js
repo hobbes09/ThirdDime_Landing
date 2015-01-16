@@ -15,32 +15,52 @@ angular.module("Quiz", ["ngMaterial", "Intro", "Que", "Funda"])
 		{"color": "#A34747", "intro": "Relax for a couple of minutes, enjoy the painting that is to follow. Then click on the painting and let your thoughts transcend into words.", "flipped": false},
 	];
 
-	$scope.askQuestion = function (index) {
-		var result = false;
+	var showFunda = function (index, val) {
+		var quiz = $scope.quizes[index];
+		var fundaDialog = {templateUrl: "static/js/funda/funda" + (index+1) + ".modal.html", controller: "FundaController", locals : {"result": false, 'color': quiz.color}};
+
+		if (val) {
+			fundaDialog.locals.result = true;
+		} else {
+			fundaDialog.locals.result = false;
+		}
+
+		$mdDialog.show(fundaDialog).then(function (val) {
+			quiz.flipped = !quiz.flipped;
+			if (val){
+				$scope.showIntro(index+1);
+			} else {
+				showQue(index);
+			}
+		}, function () {
+			quiz.flipped = !quiz.flipped;
+		});
+	}
+
+	var showQue = function (index) {
+		var queDialog = {templateUrl: "static/js/question/question" + (index+1) + ".modal.html", controller: "QueController", locals: {"index": index}};
+
+		$mdDialog.show(queDialog).then(function (val) {
+			if (val === "back"){
+				$scope.showIntro(index);
+			} else {
+				showFunda(index, val);
+			}
+			
+		}, function () {});
+	};
+
+	$scope.showIntro = function (index) {
 		var quiz = $scope.quizes[index];
 		var introDialog = {templateUrl: "static/js/intro/intro.modal.html", controller: "IntroController", locals: {"intro": quiz.intro, 'color': quiz.color, 'index': index}};
-		var queDialog = {templateUrl: "static/js/question/question" + (index+1) + ".modal.html", controller: "QueController", locals: {"index": index}};
-		var fundaDialog = {templateUrl: "static/js/funda/funda" + (index+1) + ".modal.html", controller: "FundaController", locals : {"result": result, 'color': quiz.color}};
 
-		$mdDialog.show(introDialog).then(function () {
-			$mdDialog.show(queDialog).then(function (val) {
-				if (val) {
-					fundaDialog.locals.result = true;
-				} else {
-					fundaDialog.locals.result = false;
-				}
+		$mdDialog.show(introDialog).then(function (val) {
+			if (val === "back"){
+				showFunda(index-1, false);
+			} else {
+				showQue(index);
+			}
 
-				$mdDialog.show(fundaDialog).then(function (val) {
-					quiz.flipped = !quiz.flipped;
-					if (val){
-						$scope.askQuestion(index+1);
-					}
-				}, function () {
-					quiz.flipped = !quiz.flipped;
-				});
-			}, function () {});
 		}, function () {});
-
-		// Only if quiz completed you flip.
 	};
 }]);

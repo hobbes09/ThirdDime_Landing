@@ -12,6 +12,10 @@ angular.module("Funda", ['ngMaterial', "Data"])
 		$mdDialog.hide(val);
 	};
 
+	$scope.goBack = function () {
+		$mdDialog.hide(false);
+	};
+
 }])
 .controller("DaliController", ['$scope', "data", function ($scope, data) {
 	"use strict";

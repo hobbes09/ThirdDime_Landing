@@ -1,5 +1,9 @@
 <md-dialog aria-label="Mango (Fruit)" class="que">
 	<md-content style="background-color: {{color}}">
+		<div layout="row" layout-align="space-between">
+			<div><md-button ng-click="goBack()">Back</md-button></div>
+			<div><md-button ng-click="cancel()">Close</md-button></div>
+		</div>
     	<md-subheader class="md-sticky" style="background-color: {{color}}">
     		<div layout="row">
         		<i class="fa fa-paint-brush"> </i>
