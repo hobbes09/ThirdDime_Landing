@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html ng-app="Subscribe">
+<head lang="en">
+    <title>Subscribe</title>
+    <!-- <meta charset="utf-8"> -->
+    <link rel="stylesheet" type="text/css" href="/static/css/subscribe/main.css" />
+</head>
+<body ng-controller="SubscribeController">
+  <form class="subscribe" ng-show="visible">
+    <h2><span>T</span><span>h</span><span>i</span><span>r</span><span>d</span><span>D</span><span>i</span><span>m</span><span>e</span></h2>
+    <input type="email" class="subscribe-email" name="email" placeholder="Drop your email" ng-model="user.email">
+    <input type="submit" class="subscribe-submit" value="Submit" ng-click="subscribe()">
+  </form>
+
+  <div class="quote" ng-hide="visible">
+    <span class="heavy">Looking at painting is an act of self-discovery <br> What we see is a reflection of our own conscience</span> <br><br><br><br> <span class="quotelow">Thank You for joining us on this journey <br> <a href="/blog">Keep exploring</a></span>
+  </div>
+
+
+  <script src="/static/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="/static/bower_components/angular/angular.min.js"></script>
+  <script src="/static/js/services/data.service.js"></script>
+  <script src="/static/js/subscribe/subscribe.controller.js"></script>
+  
+<script>
+    window.addEventListener('load', function() {
+  document.documentElement.className = 'ready';
+}, false);
+</script>
+
+</body>
+</html>

@@ -5,4 +5,5 @@ from django.views.generic import TemplateView
 urlpatterns = patterns('',
                        url(r'^$', TemplateView.as_view(template_name='index.html')),
                        url(r'^core/', include('core.urls')),
+                       url(r'^subscribe/$', TemplateView.as_view(template_name='subscribe.html')),
                        )
